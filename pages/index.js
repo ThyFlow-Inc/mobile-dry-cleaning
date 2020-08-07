@@ -13,7 +13,7 @@ const Index = () => {
 	return (
 		<Container>
 			<Head>
-				<title>Index</title>
+				<title>ThyFlow - Mobile Dry Cleaning</title>
 			</Head>
 			<Hero />
 			<Brands />

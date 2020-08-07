@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Testimonials = () => {
+	const cardContainer = useRef(null);
+
 	let moving = false;
 	let mouseLastPosition = 0;
 	let transform = 0;
@@ -12,15 +14,14 @@ const Testimonials = () => {
 		moving = true;
 		mouseLastPosition = e.pageX;
 		transform =
-			window.getComputedStyle(cardContainer).getPropertyValue('transform') !==
+			window.getComputedStyle(cardContainer.current).getPropertyValue('transform') !==
 			'none'
 				? window
-						.getComputedStyle(cardContainer)
+						.getComputedStyle(cardContainer.current)
 						.getPropertyValue('transform')
 						.split(',')[4]
 						.trim()
 				: 0;
-		console.log(transform);
 	};
 
 	const gestureMove = (e) => {
@@ -32,12 +33,12 @@ const Testimonials = () => {
 					return;
 				}
 			} else {
-				if (Math.abs(transformValue) > cardContainer.offsetWidth - 512) {
+				if (Math.abs(transformValue) > cardContainer.current.offsetWidth - window.innerWidth) {
 					return;
 				}
 			}
 			transformValue = parseInt(transform) + diffX;
-			cardContainer.style.transform = `translateX(${transformValue}px)`;
+			cardContainer.current.style.transform = `translateX(${transformValue}px)`;
 		}
 		lastPageX = e.pageX;
 	};
@@ -47,54 +48,34 @@ const Testimonials = () => {
 	};
 
 	useEffect(() => {
-		console.log('aa');
 		if (window.PointerEvent) {
-			window.addEventListener('pointerdown', gestureStart);
-			window.addEventListener('pointermove', gestureMove);
-			window.addEventListener('pointerup', gestureEnd);
+			cardContainer.current.addEventListener('pointerdown', gestureStart);
+			cardContainer.current.addEventListener('pointermove', gestureMove);
+			cardContainer.current.addEventListener('pointerup', gestureEnd);
 			return () => {
-				window.removeEventListener('pointerdown', gestureStart);
-				window.removeEventListener('pointermove', gestureMove);
-				window.removeEventListener('pointerup', gestureEnd);
+				cardContainer.current.removeEventListener('pointerdown', gestureStart);
+				cardContainer.current.removeEventListener('pointermove', gestureMove);
+				cardContainer.current.removeEventListener('pointerup', gestureEnd);
 			};
 		} else {
-			window.addEventListener('touchdown', gestureStart);
-			window.addEventListener('touchmove', gestureMove);
-			window.addEventListener('touchup', gestureEnd);
+			cardContainer.current.addEventListener('touchdown', gestureStart);
+			cardContainer.current.addEventListener('touchmove', gestureMove);
+			cardContainer.current.addEventListener('touchup', gestureEnd);
 
-			window.addEventListener('mousedown', gestureStart);
-			window.addEventListener('mousemove', gestureMove);
-			window.addEventListener('mouseup', gestureEnd);
-
+			cardContainer.current.addEventListener('mousedown', gestureStart);
+			cardContainer.current.addEventListener('mousemove', gestureMove);
+			cardContainer.current.addEventListener('mouseup', gestureEnd);
 			return () => {
-				window.removeEventListener('touchdown', gestureStart);
-				window.removeEventListener('touchmove', gestureMove);
-				window.removeEventListener('touchup', gestureEnd);
+				cardContainer.current.removeEventListener('touchdown', gestureStart);
+				cardContainer.current.removeEventListener('touchmove', gestureMove);
+				cardContainer.current.removeEventListener('touchup', gestureEnd);
 
-				window.removeEventListener('mousedown', gestureStart);
-				window.removeEventListener('mousemove', gestureMove);
-				window.removeEventListener('mouseup', gestureEnd);
+				cardContainer.current.removeEventListener('mousedown', gestureStart);
+				cardContainer.current.removeEventListener('mousemove', gestureMove);
+				cardContainer.current.removeEventListener('mouseup', gestureEnd);
 			};
 		}
-
-		//window.addEventListener('scroll', handleCarousel);
 	}, []);
-
-	//const cardContainer = document.querySelector('.testimonials-container');
-
-	/*if (window.PointerEvent) {
-		cardContainer.addEventListener('pointerdown', gestureStart);
-		cardContainer.addEventListener('pointermove', gestureMove);
-		cardContainer.addEventListener('pointerup', gestureEnd);
-	} else {
-		cardContainer.addEventListener('touchdown', gestureStart);
-		cardContainer.addEventListener('touchmove', gestureMove);
-		cardContainer.addEventListener('touchup', gestureEnd);
-
-		cardContainer.addEventListener('mousedown', gestureStart);
-		cardContainer.addEventListener('mousemove', gestureMove);
-		cardContainer.addEventListener('mouseup', gestureEnd);
-	}*/
 
 	return (
 		<div>
@@ -105,7 +86,7 @@ const Testimonials = () => {
 					</div>
 
 					<div className="testimonials-list">
-						<div className="testimonials-container">
+						<div className="testimonials-container" ref={cardContainer}>
 							<div className="list">
 								<div className="detail">
 									Completely beautiful website and amazing support! This is my

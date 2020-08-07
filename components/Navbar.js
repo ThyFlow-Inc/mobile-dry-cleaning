@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -7,6 +7,8 @@ const Navbar = () => {
 
 	const [scrollTop, setScrollTop] = useState('scroll-top');
 	const [header, setHeader] = useState('');
+
+	const scrollRef = useRef(null);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -18,7 +20,6 @@ const Navbar = () => {
 				setHeader('');
 			}
 		};
-		console.log(scrollTop);
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [scrollTop]);
@@ -147,7 +148,7 @@ const Navbar = () => {
 					list-style-type: none;
 				}
 
-				.nav-links li {
+				.nav-links > li {
 					/*display: inline-block;*/
 					padding: 0px 20px;
 					position: relative;
@@ -162,6 +163,10 @@ const Navbar = () => {
 
 				.nav-links li a:hover {
 					color: #ff2e69;
+				}
+
+				.nav-links i {
+					margin-left: 5px;
 				}
 
 				.sub-menu {
@@ -216,9 +221,20 @@ const Navbar = () => {
 					left: 100%;
 				}
 
+				.sub menu li:hover {
+					background-color: red;
+				}
+
 				.sub-menu li a {
 					color: #fff !important;
 					width: 100%;
+					height: 100%;
+					display: block;
+					padding-left: 15px;
+				}
+
+				.sub-menu li a:hover {
+					background-color: #1e266d;
 				}
 
 				.contact-us button {
@@ -364,6 +380,10 @@ const Navbar = () => {
 				/* Navbar End */
 
 				/* Scroll Button Start */
+
+				.scroll-top {
+					display: none;
+				}
 
 				.scroll-top.open {
 					background-color: #1e266d;

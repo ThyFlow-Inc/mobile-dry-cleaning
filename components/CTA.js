@@ -143,6 +143,13 @@ const CTA = () => {
 						height: 40px;
 						margin-right: 10px;
 					}
+
+					.cta-download .download-buttons .playstore-button img {
+						width: 20px;
+						position: relative;
+						left: -5px;
+						top: 0;
+					}
 				}
 
 				@media only screen and (max-width: 768px) {

@@ -48,7 +48,6 @@ const Hero = () => {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					margin-top: 50px;
 				}
 
 				.hero-text .slogan {
@@ -56,6 +55,7 @@ const Hero = () => {
 					font-weight: 800;
 					text-align: center;
 					color: #1e266d;
+					margin-top: 50px;
 				}
 
 				.hero-text p {
