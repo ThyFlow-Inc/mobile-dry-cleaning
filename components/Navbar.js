@@ -12,7 +12,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 150) {
+			if (window.scrollY > 0) {
 				setScrollTop('scroll-top open');
 				setHeader('sticky');
 			} else {
@@ -34,7 +34,7 @@ const Navbar = () => {
 		}
 	};
 	return (
-		<div>
+		<div style={{ display: 'unset' }}>
 			<header id="home" className={header}>
 				<img className="logo" src="assets/Logo/ThyFlow@3x.png" alt="Logo" />
 				<div>
@@ -43,9 +43,7 @@ const Navbar = () => {
 				<nav className="navbar">
 					<ul className={navLinks}>
 						<li>
-							<Link href="#home">
-								<a>Home</a>
-							</Link>
+							<a href="#home">Home</a>
 						</li>
 						<li>
 							<a href="#about">Features</a>
@@ -122,7 +120,7 @@ const Navbar = () => {
 				header.sticky {
 					background-color: rgba(0, 136, 169, 1);
 					position: -webkit-sticky;
-					position: sticky;
+					position: sticky !important;
 					top: 0;
 				}
 
