@@ -10,27 +10,36 @@ const Brands = () => {
 					</div>
 					<div className="first-row">
 						<div>
-							<img src="assets/Brands/DrawKit/logo-2@3x.png" />
+							<img
+								src="assets/Brands/DrawKit/logo-2@3x.png"
+								alt="brand image"
+							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Cinemax/logo-4@3x.png" />
+							<img
+								src="assets/Brands/Cinemax/logo-4@3x.png"
+								alt="brand image"
+							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Disney/logo-7@3x.png" />
+							<img src="assets/Brands/Disney/logo-7@3x.png" alt="brand image" />
 						</div>
 					</div>
 					<div className="second-row">
 						<div>
-							<img src="assets/Brands/Netflix/logo-1@3x.png" />
+							<img
+								src="assets/Brands/Netflix/logo-1@3x.png"
+								alt="brand image"
+							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Figma/logo-3@3x.png" />
+							<img src="assets/Brands/Figma/logo-3@3x.png" alt="brand image" />
 						</div>
 						<div>
-							<img src="assets/Brands/Stripe/logo-5@3x.png" />
+							<img src="assets/Brands/Stripe/logo-5@3x.png" alt="brand image" />
 						</div>
 						<div>
-							<img src="assets/Brands/Google/logo-6@3x.png" />
+							<img src="assets/Brands/Google/logo-6@3x.png" alt="brand image" />
 						</div>
 					</div>
 				</div>
@@ -39,7 +48,7 @@ const Brands = () => {
 				/* Brands Start */
 
 				.brands {
-					margin-top: 120px;
+					margin-top: 60px;
 					height: 300px;
 					background-color: #fff;
 				}

@@ -18,7 +18,7 @@ const About = () => {
 							<div className="row">
 								<div className="col-md-6">
 									<div className="about-image">
-										<img src="assets/About/Group 6@3x.png" />
+										<img src="assets/About/Group 6@3x.png" alt="group" />
 									</div>
 								</div>
 								<div className="col-md-6 about-list">
@@ -26,7 +26,10 @@ const About = () => {
 										<div className="row">
 											<div className="col-3">
 												<div className="list-image">
-													<img src="assets/About/Icons/Icon@3x.png" />
+													<img
+														src="assets/About/Icons/Icon@3x.png"
+														alt="list icon"
+													/>
 												</div>
 											</div>
 											<div className="col-9">
@@ -43,7 +46,10 @@ const About = () => {
 										<div className="row">
 											<div className="col-3">
 												<div className="list-image">
-													<img src="assets/About/Icons/Rectangle 3@3x.png" />
+													<img
+														src="assets/About/Icons/Rectangle 3@3x.png"
+														alt="list icon"
+													/>
 												</div>
 											</div>
 											<div className="col-9">
@@ -60,7 +66,10 @@ const About = () => {
 										<div className="row">
 											<div className="col-3">
 												<div className="list-image">
-													<img src="assets/About/Icons/Rectangle 4@3x.png" />
+													<img
+														src="assets/About/Icons/Rectangle 4@3x.png"
+														alt="list icon"
+													/>
 												</div>
 											</div>
 											<div className="col-9">

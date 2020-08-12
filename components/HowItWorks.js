@@ -10,14 +10,20 @@ const HowItWorks = () => {
 					<div className="how-it-works-items">
 						<div className="group">
 							<div className="group-image">
-								<img src="assets/How_It_Works/items/1/vaadin_area-select@3x.png" />
+								<img
+									src="assets/How_It_Works/items/1/vaadin_area-select@3x.png"
+									alt="how it works item"
+								/>
 							</div>
 							<div className="group-text">Select the service you need</div>
 						</div>
 
 						<div className="group">
 							<div className="group-image">
-								<img src="assets/How_It_Works/items/2/ant-design_schedule-outlined@3x.png" />
+								<img
+									src="assets/How_It_Works/items/2/ant-design_schedule-outlined@3x.png"
+									alt="how it works item"
+								/>
 							</div>
 							<div className="group-text">
 								Schedule a time for your items to be picked up
@@ -26,7 +32,10 @@ const HowItWorks = () => {
 
 						<div className="group">
 							<div className="group-image">
-								<img src="assets/How_It_Works/items/3/emojione-monotone_delivery-truck@3x.png" />
+								<img
+									src="assets/How_It_Works/items/3/emojione-monotone_delivery-truck@3x.png"
+									alt="how it works item"
+								/>
 							</div>
 							<div className="group-text">
 								Get it Delivered between 7:00 PM - 10:00 PM

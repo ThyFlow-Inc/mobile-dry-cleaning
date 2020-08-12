@@ -13,6 +13,23 @@ const Hero = () => {
 						</div>
 						<p>Premium On-Deman dry-cleaners</p>
 					</div>
+					<div className="hero-cta">
+						<div className="hero-cta-group">
+							<div className="hero-cta-email">
+								<input type="email" placeholder="Your email" id="alt-text" />
+							</div>
+							<div className="hero-cta-invite">
+								<a href="#">
+									<button>Get Invite</button>
+								</a>
+							</div>
+						</div>
+						<div className="alt-text">
+							<label htmlFor="alt-text">
+								Enter your email to get an invite to ThyFlow
+							</label>
+						</div>
+					</div>
 
 					<div className="hero-buttons">
 						<a href="#">
@@ -25,7 +42,7 @@ const Hero = () => {
 
 					<div className="hero-image">
 						<div className="images">
-							<img src="assets/Hero_Header/Group6@3x.png" />
+							<img src="assets/Hero_Header/Group6@3x.png" alt="hero header" />
 						</div>
 					</div>
 				</div>
@@ -36,7 +53,7 @@ const Hero = () => {
 				.hero {
 					width: 100%;
 					/*height: calc(100vh - 100px);*/
-					height: 670px;
+					/*height: 790px;*/
 					background: linear-gradient(
 						180deg,
 						rgba(242, 249, 255, 0.12) 0%,
@@ -47,6 +64,53 @@ const Hero = () => {
 				.hero-text {
 					display: flex;
 					flex-direction: column;
+					align-items: center;
+				}
+
+				.hero-cta {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.hero-cta-group {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.hero-cta .alt-text {
+					position: relative;
+					font: 14px Lato;
+					left: -107px;
+					margin-top: 5px;
+					color: #1e266d;
+				}
+
+				.hero-cta .hero-cta-email input[type='email'] {
+					width: 350px;
+					height: 50px;
+					border: 1px solid #ddd;
+					padding: 5px 5px 5px 10px;
+					border-radius: 6px;
+					font: 16px Lato;
+				}
+
+				.hero-cta .hero-cta-invite button {
+					border: 0;
+					width: 130px;
+					height: 50px;
+					background: #3751ff;
+					border-radius: 6px;
+					font-family: Lato;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					color: #fff;
+					margin-left: 5px;
+
+					display: flex;
+					justify-content: center;
 					align-items: center;
 				}
 
@@ -135,9 +199,32 @@ const Hero = () => {
 					.hero {
 						height: auto;
 					}
+
+					.hero-cta .hero-cta-email input[type='email'] {
+						width: 280px;
+					}
+
+					.hero-cta .hero-cta-invite button {
+						width: 280px !important;
+					}
+
+					.hero-cta .alt-text {
+						margin-left: 65px;
+					}
 				}
 
-				/* Extra small devices (phones, 600px and down) */
+				@media only screen and (max-width: 500px) {
+					.hero-cta-group {
+						flex-direction: column;
+					}
+
+					.hero-cta .hero-cta-invite button {
+						width: 350px;
+						margin-left: 0;
+						margin-top: 10px;
+					}
+				}
+
 				@media only screen and (max-width: 768px) {
 					.hero-image .images {
 						width: 100%;
@@ -146,6 +233,10 @@ const Hero = () => {
 
 					.hero-image .images img {
 						width: 100%;
+					}
+
+					.hero-cta .alt-text {
+						left: -45px;
 					}
 				}
 

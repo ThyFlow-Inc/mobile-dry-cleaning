@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks';
 import About from '../components/About';
 import Testimonials from '../components/Testimonials';
 import Blog from '../components/Blog';
+import FAQ from '../components/FAQ';
 import CTA from '../components/CTA';
 
 const Index = () => {
@@ -14,6 +15,10 @@ const Index = () => {
 		<Container>
 			<Head>
 				<title>ThyFlow - Mobile Dry Cleaning</title>
+				<meta
+					name="description"
+					content="ThyFlow Mobile Dry Cleaning Service Landing Page"
+				/>
 			</Head>
 			<Hero />
 			<Brands />
@@ -21,6 +26,7 @@ const Index = () => {
 			<About />
 			<Testimonials />
 			<Blog />
+			<FAQ />
 			<CTA />
 		</Container>
 	);

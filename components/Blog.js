@@ -12,21 +12,21 @@ const Blog = () => {
 					<div className="blog-list">
 						<div className="list">
 							<div className="list-image">
-								<img src="assets/Blog/Rectangle 17@3x.png" />
+								<img src="assets/Blog/Rectangle 17@3x.png" alt="blog image" />
 							</div>
 							<div className="list-title">Dog Grooming at your fingerprint</div>
 						</div>
 
 						<div className="list">
 							<div className="list-image">
-								<img src="assets/Blog/Rectangle 18@3x.png" />
+								<img src="assets/Blog/Rectangle 18@3x.png" alt="blog image" />
 							</div>
 							<div className="list-title">Dog Grooming at your fingerprint</div>
 						</div>
 
 						<div className="list">
 							<div className="list-image">
-								<img src="assets/Blog/Rectangle 19@3x.png" />
+								<img src="assets/Blog/Rectangle 19@3x.png" alt="blog image" />
 							</div>
 							<div className="list-title">Dog Grooming at your fingerprint</div>
 						</div>

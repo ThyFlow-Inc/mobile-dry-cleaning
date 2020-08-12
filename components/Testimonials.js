@@ -14,8 +14,9 @@ const Testimonials = () => {
 		moving = true;
 		mouseLastPosition = e.pageX;
 		transform =
-			window.getComputedStyle(cardContainer.current).getPropertyValue('transform') !==
-			'none'
+			window
+				.getComputedStyle(cardContainer.current)
+				.getPropertyValue('transform') !== 'none'
 				? window
 						.getComputedStyle(cardContainer.current)
 						.getPropertyValue('transform')
@@ -33,7 +34,10 @@ const Testimonials = () => {
 					return;
 				}
 			} else {
-				if (Math.abs(transformValue) > cardContainer.current.offsetWidth - window.innerWidth) {
+				if (
+					Math.abs(transformValue) >
+					cardContainer.current.offsetWidth - window.innerWidth
+				) {
 					return;
 				}
 			}
@@ -94,7 +98,10 @@ const Testimonials = () => {
 									so much and she has helped me so well when I needed it!
 								</div>
 								<div className="profile-picture">
-									<img src="assets/Profile_Picture/image 5@3x.png" />
+									<img
+										src="assets/Profile_Picture/image 5@3x.png"
+										alt="profile picture"
+									/>
 								</div>
 
 								<div className="user-title">Happy User</div>
@@ -108,7 +115,10 @@ const Testimonials = () => {
 									so much and she has helped me so well when I needed it!
 								</div>
 								<div className="profile-picture">
-									<img src="assets/Profile_Picture/image 5@3x.png" />
+									<img
+										src="assets/Profile_Picture/image 5@3x.png"
+										alt="profile picture"
+									/>
 								</div>
 
 								<div className="user-title">Happy User</div>
@@ -122,7 +132,10 @@ const Testimonials = () => {
 									service! Thank you very much!
 								</div>
 								<div className="profile-picture">
-									<img src="assets/Profile_Picture/image 6@3x.png" />
+									<img
+										src="assets/Profile_Picture/image 6@3x.png"
+										alt="profile picture"
+									/>
 								</div>
 
 								<div className="user-title">Happy User</div>
@@ -136,7 +149,10 @@ const Testimonials = () => {
 									relatively new WordPress user.
 								</div>
 								<div className="profile-picture">
-									<img src="assets/Profile_Picture/image 7@3x.png" />
+									<img
+										src="assets/Profile_Picture/image 7@3x.png"
+										alt="profile picture"
+									/>
 								</div>
 
 								<div className="user-title">Happy User</div>

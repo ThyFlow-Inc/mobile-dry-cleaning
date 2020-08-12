@@ -18,34 +18,14 @@ const CTA = () => {
 							</div>
 							<div className="col-lg-6">
 								<div className="cta-download">
-									<div className="row">
-										<div className="col-md-12">
-											<div className="download-text">Download Our App</div>
+									<div className="download-text">
+										<div className="cta-email">
+											<input type="email" placeholder="Your Email" />
 										</div>
-									</div>
-									<div className="row">
-										<div className="col-md-12">
-											<div className="download-buttons">
-												<a href="#">
-													<div className="playstore-button">
-														<img src="assets/CTA/iconfinder_Contat_Us_15-Send_Mail_4211845 1@3x.png" />
-														Playstore
-													</div>
-												</a>
-												<a href="#">
-													<div className="playstore-button">
-														<img src="assets/CTA/iconfinder_Contat_Us_15-Send_Mail_4211845 1@3x.png" />
-														Playstore
-													</div>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div className="row">
-										<div className="col-md-12">
-											<div className="download-suggest">
-												Or, take a peek inside our <span>design studio</span>
-											</div>
+										<div className="cta-button">
+											<a href="#">
+												<button>Get Invite</button>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -114,13 +94,52 @@ const CTA = () => {
 				}
 
 				.cta-download .download-text {
-					font-family: Lato;
+					/*font-family: Lato;
 					font-style: normal;
 					font-weight: 600;
 					font-size: 24px;
-					line-height: 125%;
 					text-align: center;
-					color: #dfe0eb;
+					color: #dfe0eb;*/
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 150px;
+				}
+
+				.cta-download .download-text a {
+					text-decoration: none;
+				}
+
+				.cta-download .download-text input[type='email'] {
+					width: 350px;
+					height: 50px;
+					border: 1px solid #ddd;
+					padding: 5px 5px 5px 10px;
+					border-radius: 6px;
+					font: 16px Lato;
+				}
+
+				.cta-download .download-text button {
+					border: 0;
+					width: 130px;
+					height: 50px;
+					background: #fff;
+					border-radius: 6px;
+					font-family: Lato;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					color: #455880;
+					margin-left: 5px;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.cta-download .download-text button:hover {
+					background: #ebebeb;
 				}
 
 				.cta-download .download-suggest {
@@ -138,8 +157,8 @@ const CTA = () => {
 				}
 
 				@media only screen and (max-width: 320px) {
-					.cta-download .download-buttons .playstore-button {
-						width: 130px;
+					/*.cta-download .download-buttons .playstore-button {
+						width: 100px;
 						height: 40px;
 						margin-right: 10px;
 					}
@@ -149,6 +168,25 @@ const CTA = () => {
 						position: relative;
 						left: -5px;
 						top: 0;
+					}*/
+
+					.cta-download .download-text input[type='email'] {
+						width: 300px;
+					}
+					.cta-download .download-text button {
+						width: 300px !important;
+					}
+				}
+
+				@media only screen and (max-width: 500px) {
+					.cta-download .download-text {
+						flex-direction: column;
+					}
+
+					.cta-download .download-text button {
+						width: 350px;
+						margin-left: 0;
+						margin-top: 10px;
 					}
 				}
 

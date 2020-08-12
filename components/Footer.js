@@ -45,27 +45,34 @@ const Footer = () => {
 									<div className="social-media-links">
 										<div>
 											<a href="#">
-												<img src="assets/Footer/social/icon-facebook@3x.png" />
+												<img
+													src="assets/Footer/social/icon-facebook@3x.png"
+													alt="social icon"
+												/>
 											</a>
 										</div>
 										<div>
 											<a href="#">
-												<img src="assets/Footer/social/icon-instagram@3x.png" />
+												<img
+													src="assets/Footer/social/icon-instagram@3x.png"
+													alt="social icon"
+												/>
 											</a>
 										</div>
 										<div>
 											<a href="#">
-												<img src="assets/Footer/social/icon-twitter@3x.png" />
+												<img
+													src="assets/Footer/social/icon-twitter@3x.png"
+													alt="social icon"
+												/>
 											</a>
 										</div>
 										<div>
 											<a href="#">
-												<img src="assets/Footer/social/icon-dribbble@3x.png" />
-											</a>
-										</div>
-										<div>
-											<a href="#">
-												<img src="assets/Footer/social/icon-envato@3x.png" />
+												<img
+													src="assets/Footer/social/icon-linkedin@3x.png"
+													alt="social icon"
+												/>
 											</a>
 										</div>
 									</div>

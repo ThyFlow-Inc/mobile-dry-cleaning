@@ -38,12 +38,19 @@ const Navbar = () => {
 			<header id="home" className={header}>
 				<img className="logo" src="assets/Logo/ThyFlow@3x.png" alt="Logo" />
 				<div>
-					<img src="assets/Dots/logo@3x.png" width="100" className="dots" />
+					<img
+						src="assets/Dots/logo@3x.png"
+						width="100"
+						className="dots"
+						alt="dots"
+					/>
 				</div>
 				<nav className="navbar">
 					<ul className={navLinks}>
 						<li>
-							<a href="#home">Home</a>
+							<a href="#home" aria-label="Home">
+								Home
+							</a>
 						</li>
 						<li>
 							<a href="#about">Features</a>
@@ -71,6 +78,11 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
+							<Link href="#faq">
+								<a>FAQ</a>
+							</Link>
+						</li>
+						<li>
 							<Link href="#footer">
 								<a>Contact</a>
 							</Link>
@@ -86,7 +98,7 @@ const Navbar = () => {
 					<div className="line"></div>
 				</div>
 			</header>
-			<a href="#home">
+			<a href="#home" aria-label="Scroll Top">
 				<div className={scrollTop}>
 					<i className="fa fa-angle-up" aria-hidden="true"></i>
 				</div>
@@ -114,7 +126,7 @@ const Navbar = () => {
 				header .dots {
 					position: absolute;
 					left: 170px;
-					top: 27px;
+					top: 28px;
 				}
 
 				header.sticky {
