@@ -11,17 +11,24 @@ const Layout = (props) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf8" />
 				<meta property="og:type" content="website" />
-				<meta name="og:title" property="og:title" content="content" />
+				<meta
+					name="og:title"
+					property="og:title"
+					content="ThyFlow - Mobile Dry Cleaning"
+				/>
 				<meta
 					name="og:description"
 					property="og:description"
-					content="content"
+					content="ThyFlow Mobile Dry Cleaning Service Landing Page"
 				/>
-				<meta property="og:site_name" content="content" />
-				<meta property="og:url" content="content" />
+				<meta property="og:site_name" content="ThyFlow" />
+				<meta
+					property="og:url"
+					content="https://mobile-dry-cleaning.netlify.app/"
+				/>
 				<meta
 					property="og:image"
-					content="assets/Logo/ThyFlow@3x.png"
+					content="https://mobile-dry-cleaning.netlify.app/assets/Logo/ThyFlow@3x.png"
 					alt="ThyFlow"
 				/>
 				<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
