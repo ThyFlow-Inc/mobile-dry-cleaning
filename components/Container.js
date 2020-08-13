@@ -19,6 +19,11 @@ const Layout = (props) => {
 				/>
 				<meta property="og:site_name" content="content" />
 				<meta property="og:url" content="content" />
+				<meta
+					property="og:image"
+					content="assets/Logo/ThyFlow@3x.png"
+					alt="ThyFlow"
+				/>
 				<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
 				<link
 					rel="stylesheet"
