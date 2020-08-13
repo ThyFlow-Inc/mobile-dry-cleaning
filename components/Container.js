@@ -28,7 +28,7 @@ const Layout = (props) => {
 				/>
 				<meta
 					property="og:image"
-					content="https://mobile-dry-cleaning.netlify.app/assets/Logo/ThyFlow@3x.png"
+					content="https://mobile-dry-cleaning.netlify.app/assets/Logo/Shop-Icon.png"
 					alt="ThyFlow"
 				/>
 				<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
