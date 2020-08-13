@@ -175,7 +175,7 @@ const FAQ = () => {
 				}
 
 				.accordion-item-header::after {
-					content: ${'\\25be'};
+					content: '▾';
 					font-size: 26px;
 					position: absolute;
 					right: 10px;
