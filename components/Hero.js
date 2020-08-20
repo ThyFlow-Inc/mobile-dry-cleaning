@@ -14,16 +14,28 @@ const Hero = () => {
 						<p>Premium On-Deman dry-cleaners</p>
 					</div>
 					<div className="hero-cta">
-						<div className="hero-cta-group">
-							<div className="hero-cta-email">
-								<input type="email" placeholder="Your email" id="alt-text" />
+						<form
+							action="https://forms.zohopublic.com/thyflow/form/InviteForm/formperma/hhZdwWmBg5AwZ1GNN08MYEcY3tDPFStgixYihuf3PTU/htmlRecords/submit"
+							method="POST"
+							accept-charset="UTF-8"
+							enctype="multipart/form-data"
+						>
+							<div className="hero-cta-group">
+								<div className="hero-cta-email">
+									<input
+										type="email"
+										name="Email"
+										placeholder="Your email"
+										id="alt-text"
+									/>
+								</div>
+								<div className="hero-cta-invite">
+									<a href="#">
+										<button type="submit">Get Invite</button>
+									</a>
+								</div>
 							</div>
-							<div className="hero-cta-invite">
-								<a href="#">
-									<button>Get Invite</button>
-								</a>
-							</div>
-						</div>
+						</form>
 						<div className="alt-text">
 							<label htmlFor="alt-text">
 								Enter your email to get an invite to ThyFlow

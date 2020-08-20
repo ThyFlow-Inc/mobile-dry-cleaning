@@ -18,16 +18,27 @@ const CTA = () => {
 							</div>
 							<div className="col-lg-6">
 								<div className="cta-download">
-									<div className="download-text">
-										<div className="cta-email">
-											<input type="email" placeholder="Your Email" />
+									<form
+										action="https://forms.zohopublic.com/thyflow/form/InviteForm/formperma/hhZdwWmBg5AwZ1GNN08MYEcY3tDPFStgixYihuf3PTU/htmlRecords/submit"
+										method="POST"
+										accept-charset="UTF-8"
+										enctype="multipart/form-data"
+									>
+										<div className="download-text">
+											<div className="cta-email">
+												<input
+													type="email"
+													name="Email"
+													placeholder="Your Email"
+												/>
+											</div>
+											<div className="cta-button">
+												<a href="#">
+													<button>Get Invite</button>
+												</a>
+											</div>
 										</div>
-										<div className="cta-button">
-											<a href="#">
-												<button>Get Invite</button>
-											</a>
-										</div>
-									</div>
+									</form>
 								</div>
 							</div>
 						</div>
