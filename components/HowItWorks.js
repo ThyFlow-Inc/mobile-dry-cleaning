@@ -59,6 +59,27 @@ const HowItWorks = () => {
 							<div className="get-started-button">Get Started</div>
 						</a>
 					</div>
+
+					<div className="how-it-works-signup">
+						<form
+							action="https://forms.zohopublic.com/thyflow/form/SignupProcess/formperma/x_HU6B2P9O-STSVBcMWvj0eSIefzqmyupC2ooGNVdJQ/htmlRecords/submit"
+							name="form"
+							id="form"
+							method="POST"
+							acceptCharset="UTF-8"
+							encType="multipart/form-data"
+						>
+							<div className="signup-email">
+								<input type="email" name="Email" placeholder="Your Email" />
+							</div>
+							<div className="signup-city">
+								<input type="text" name="SingleLine" placeholder="Your City" />
+							</div>
+							<div className="signup-submit">
+								<button type="submit">Sign Up</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 			<style jsx>{`
@@ -170,7 +191,78 @@ const HowItWorks = () => {
 					align-items: center;
 				}
 
+				.how-it-works-signup {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					margin-top: 15px;
+				}
+
+				.how-it-works-signup div {
+					margin-right: 5px;
+				}
+
+				.how-it-works-signup form {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.how-it-works-signup form input {
+					width: 350px;
+					height: 50px;
+					border: 1px solid #ddd;
+					padding: 5px 5px 5px 10px;
+					border-radius: 6px;
+					font: 16px Lato;
+				}
+
+				.how-it-works-signup form button {
+					border: 0;
+					width: 130px;
+					height: 50px;
+					background: #3751ff;
+					border-radius: 6px;
+					font-family: Lato;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					color: #fff;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
 				@media only screen and (max-width: 320px) {
+				}
+
+				@media only screen and (max-width: 850px) {
+					.how-it-works-signup form {
+						flex-direction: column;
+					}
+
+					.how-it-works-signup form div {
+						margin-bottom: 10px;
+					}
+
+					.how-it-works-signup form button,
+					.how-it-works-signup form input {
+						width: 450px;
+					}
+				}
+
+				@media only screen and (max-width: 470px) {
+					.how-it-works-signup form button,
+					.how-it-works-signup form input {
+						width: 350px;
+					}
+				}
+
+				@media only screen and (max-width: 360px) {
+					.how-it-works-signup form button,
+					.how-it-works-signup form input {
+						width: 280px;
+					}
 				}
 
 				/* Extra small devices (phones, 600px and down) */

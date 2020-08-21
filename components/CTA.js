@@ -21,8 +21,8 @@ const CTA = () => {
 									<form
 										action="https://forms.zohopublic.com/thyflow/form/InviteForm/formperma/hhZdwWmBg5AwZ1GNN08MYEcY3tDPFStgixYihuf3PTU/htmlRecords/submit"
 										method="POST"
-										accept-charset="UTF-8"
-										enctype="multipart/form-data"
+										acceptCharset="UTF-8"
+										encType="multipart/form-data"
 									>
 										<div className="download-text">
 											<div className="cta-email">
