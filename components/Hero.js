@@ -6,7 +6,7 @@ const Hero = () => {
 			<section id="hero">
 				<div className="hero">
 					<div className="hero-text">
-						<div className="slogan">
+						<div className="slogan show-on-scroll">
 							Mobile Dry Cleaning and Laundry When
 							<br />
 							You Need It!
@@ -54,7 +54,11 @@ const Hero = () => {
 
 					<div className="hero-image">
 						<div className="images">
-							<img src="assets/Hero_Header/Group6@3x.png" alt="hero header" />
+							<img
+								src="assets/Hero_Header/Group6@3x.png"
+								alt="hero header"
+								className="show-on-scroll"
+							/>
 						</div>
 					</div>
 				</div>
@@ -132,6 +136,16 @@ const Hero = () => {
 					text-align: center;
 					color: #1e266d;
 					margin-top: 50px;
+					opacity: 0;
+					transform: translateY(4em);
+					transition: transform 2s 0.25s cubic-bezier(0, 1, 0.3, 1),
+						opacity 0.3s 0.25s ease-out;
+					will-change: transform, opacity;
+				}
+
+				.hero-text .slogan.is-visible {
+					opacity: 1;
+					transform: rotateZ(0deg);
 				}
 
 				.hero-text p {
@@ -198,6 +212,19 @@ const Hero = () => {
 
 				.hero-image .images img {
 					width: 700px;
+				}
+
+				.hero-image .images img {
+					opacity: 0;
+					transform: translateY(4em);
+					transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+						opacity 0.3s 0.25s ease-out;
+					will-change: transform, opacity;
+				}
+
+				.hero-image .images img.is-visible {
+					opacity: 1;
+					transform: rotateZ(0deg);
 				}
 
 				@media only screen and (max-width: 320px) {

@@ -39,6 +39,7 @@ class MyDocument extends Document {
 				<body>
 					<Main />
 					<NextScript />
+					<script src="show-on-scroll.js"></script>
 				</body>
 			</Html>
 		);

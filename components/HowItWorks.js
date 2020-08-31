@@ -8,7 +8,7 @@ const HowItWorks = () => {
 					<div className="how-it-works-text">How It Works</div>
 
 					<div className="how-it-works-items">
-						<div className="group">
+						<div className="group show-on-scroll">
 							<div className="group-image">
 								<img
 									src="assets/How_It_Works/items/1/vaadin_area-select@3x.png"
@@ -18,7 +18,7 @@ const HowItWorks = () => {
 							<div className="group-text">Select the service you need</div>
 						</div>
 
-						<div className="group">
+						<div className="group show-on-scroll">
 							<div className="group-image">
 								<img
 									src="assets/How_It_Works/items/2/ant-design_schedule-outlined@3x.png"
@@ -30,7 +30,7 @@ const HowItWorks = () => {
 							</div>
 						</div>
 
-						<div className="group">
+						<div className="group show-on-scroll">
 							<div className="group-image">
 								<img
 									src="assets/How_It_Works/items/3/emojione-monotone_delivery-truck@3x.png"
@@ -117,6 +117,16 @@ const HowItWorks = () => {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
+					opacity: 0;
+					transform: translateY(4em);
+					transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+						opacity 0.3s 0.25s ease-out;
+					will-change: transform, opacity;
+				}
+
+				.how-it-works-items .group.is-visible {
+					opacity: 1;
+					transform: rotateZ(0deg);
 				}
 
 				.how-it-works-items .group-image {

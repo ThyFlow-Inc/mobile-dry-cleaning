@@ -13,16 +13,22 @@ const Brands = () => {
 							<img
 								src="assets/Brands/DrawKit/logo-2@3x.png"
 								alt="brand image"
+								className="show-on-scroll"
 							/>
 						</div>
 						<div>
 							<img
 								src="assets/Brands/Cinemax/logo-4@3x.png"
 								alt="brand image"
+								className="show-on-scroll"
 							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Disney/logo-7@3x.png" alt="brand image" />
+							<img
+								src="assets/Brands/Disney/logo-7@3x.png"
+								alt="brand image"
+								className="show-on-scroll"
+							/>
 						</div>
 					</div>
 					<div className="second-row">
@@ -30,16 +36,29 @@ const Brands = () => {
 							<img
 								src="assets/Brands/Netflix/logo-1@3x.png"
 								alt="brand image"
+								className="show-on-scroll"
 							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Figma/logo-3@3x.png" alt="brand image" />
+							<img
+								src="assets/Brands/Figma/logo-3@3x.png"
+								alt="brand image"
+								className="show-on-scroll"
+							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Stripe/logo-5@3x.png" alt="brand image" />
+							<img
+								src="assets/Brands/Stripe/logo-5@3x.png"
+								alt="brand image"
+								className="show-on-scroll"
+							/>
 						</div>
 						<div>
-							<img src="assets/Brands/Google/logo-6@3x.png" alt="brand image" />
+							<img
+								src="assets/Brands/Google/logo-6@3x.png"
+								alt="brand image"
+								className="show-on-scroll"
+							/>
 						</div>
 					</div>
 				</div>
@@ -79,6 +98,19 @@ const Brands = () => {
 					font-weight: normal;
 					line-height: 50px;
 					color: rgba(69, 88, 128, 0.5);
+				}
+
+				.brands img {
+					opacity: 0;
+					transform: translateY(4em);
+					transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+						opacity 0.3s 0.25s ease-out;
+					will-change: transform, opacity;
+				}
+
+				.brands img.is-visible {
+					opacity: 1;
+					transform: rotateZ(0deg);
 				}
 
 				@media only screen and (max-width: 320px) {
