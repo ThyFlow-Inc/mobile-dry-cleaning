@@ -12,6 +12,9 @@ class MyDocument extends Document {
 		const GA_TRACKING_ID = 'UA-175391204-1';
 		return (
 			<Html lang="en">
+				<Head>
+					<script async src="bot.js"></script>
+				</Head>
 				<Head />
 				{/* We only want to add the scripts if in production */}
 				{isProduction && (
