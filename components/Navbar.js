@@ -36,7 +36,7 @@ const Navbar = () => {
 	return (
 		<div style={{ display: 'unset' }}>
 			<header id="home" className={header}>
-				<img className="logo" src="assets/Logo/ThyFlow@3x.png" alt="Logo" />
+				<img className="logo" src="assets/Logo/logo.svg" alt="Logo" />
 				<div>
 					<img
 						src="assets/Dots/logo@3x.png"
@@ -89,7 +89,7 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</nav>
-				<a href="#" className="contact-us">
+				<a href="#footer" className="contact-us">
 					<button>Contact Us</button>
 				</a>
 				<div className={hamburger} onClick={handleHamburger}>
@@ -405,8 +405,10 @@ const Navbar = () => {
 					justify-content: center;
 					align-items: center;
 					position: fixed;
-					bottom: 35px;
-					right: 50px;
+					left: 30px;
+					bottom: 25px;
+					/*bottom: 35px;
+					right: 50px;*/
 					z-index: 99;
 				}
 

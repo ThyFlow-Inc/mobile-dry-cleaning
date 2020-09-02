@@ -210,6 +210,7 @@ const HowItWorks = () => {
 
 				.how-it-works-signup div {
 					margin-right: 5px;
+					margin-bottom: 15px;
 				}
 
 				.how-it-works-signup form {

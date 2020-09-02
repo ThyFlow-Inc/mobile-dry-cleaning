@@ -27,59 +27,76 @@ const FAQ = () => {
 					<div className="faq-intro">
 						<div className="faq-button">F.A.Q.</div>
 						<div className="faq-header">Frequently Asked Questions</div>
-						<div className="faq-alt-text">
-							Fusce placerat pretium mauris, vel sollicitudin elit lacinia
-							vitae. Quisque sit amet
-							<br />
-							nisi erat.
-						</div>
 					</div>
 
 					<div className="accordion" ref={accordionRef}>
 						<div className="accordion-item">
+							<div className="accordion-item-header">What We Do</div>
+							<div className="accordion-item-body">
+								<p>
+									We pick-up, clean, press and deliver domestic dry cleaning,
+									laundry and ironing for residential customers across the Bay
+									Area.
+								</p>
+							</div>
+						</div>
+						<div className="accordion-item">
+							<div className="accordion-item-header">Areas We Cover</div>
+							<div className="accordion-item-body">
+								<p>San Francisco, San Jose, San Diego, San Mateo</p>
+							</div>
+						</div>
+
+						<div className="accordion-item">
 							<div className="accordion-item-header">
-								<span>Question 1</span>
+								Do you charge a Delivery Fee?
 							</div>
 							<div className="accordion-item-body">
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. Lorem Ipsum has been the industry's
-									standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type
-									specimen book. It has survived not only five centuries, but
-									also the leap into electronic typesetting, remaining
-									essentially unchanged. It was popularised in the 1960s with
-									the release of Letraset sheets containing Lorem Ipsum
-									passages, and more recently with desktop publishing software
-									like Aldus PageMaker including versions of Lorem Ipsum.
+									A $7.95 Service Fee is charged per order and includes the cost
+									of both pickup and delivery.
 								</p>
 							</div>
 						</div>
 
 						<div className="accordion-item">
-							<div className="accordion-item-header">Question 2</div>
+							<div className="accordion-item-header">
+								What if I need to cancel my order?
+							</div>
 							<div className="accordion-item-body">
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. Lorem Ipsum has been the industry's
-									standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type
-									specimen book. It has survived not only five centuries, but
-									also the leap into electronic typesetting, remaining
-									essentially unchanged. It was popularised in the 1960s with
-									the release of Letraset sheets containing Lorem Ipsum
-									passages, and more recently with desktop publishing software
-									like Aldus PageMaker including versions of Lorem Ipsum. Lorem
-									Ipsum is simply dummy text of the printing and typesetting
-									industry. Lorem Ipsum has been the industry's standard dummy
-									text ever since the 1500s, when an unknown printer took a
-									galley of type and scrambled it to make a type specimen book.
-									It has survived not only five centuries, but also the leap
-									into electronic typesetting, remaining essentially unchanged.
-									It was popularised in the 1960s with the release of Letraset
-									sheets containing Lorem Ipsum passages, and more recently with
-									desktop publishing software like Aldus PageMaker including
-									versions of Lorem Ipsum.
+									No worries, we understand if you need to cancel! Just email{' '}
+									<a href="mailto:support@thyflow.com">support@thyflow.com</a>{' '}
+									and let us know you need to cancel or reschedule. There are no
+									cancellation penalties, just appreciation for giving us the
+									heads up!
+								</p>
+							</div>
+						</div>
+
+						<div className="accordion-item">
+							<div className="accordion-item-header">How Can I Pay?</div>
+							<div className="accordion-item-body">
+								<p>We accept payment by credit card only.</p>
+							</div>
+						</div>
+
+						<div className="accordion-item">
+							<div className="accordion-item-header">
+								What Credit Cards Do You Accept?
+							</div>
+							<div className="accordion-item-body">
+								<p>We accept Visa, Mastercard and American Express.</p>
+							</div>
+						</div>
+
+						<div className="accordion-item">
+							<div className="accordion-item-header">Support</div>
+							<div className="accordion-item-body">
+								<p>
+									You can just email{' '}
+									<a href="mailto:support@thyflow.com">support@thyflow.com</a>{' '}
+									for any kind of problems and thoughts.
 								</p>
 							</div>
 						</div>
