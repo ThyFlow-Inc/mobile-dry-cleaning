@@ -252,6 +252,27 @@ const Hero = () => {
 					}
 				}
 
+				@media only screen and (max-width: 360px) {
+					.hero-buttons .clean-button,
+					.hero-buttons .features-button {
+						font-size: 14px;
+						width: 120px;
+						height: 40px;
+					}
+
+					.hero-cta .hero-cta-email input[type='email'] {
+						width: 300px;
+					}
+
+					.hero-cta .hero-cta-invite button {
+						width: 300px !important;
+					}
+
+					.hero-cta .alt-text {
+						margin-left: 55px;
+					}
+				}
+
 				@media only screen and (max-width: 500px) {
 					.hero-cta-group {
 						flex-direction: column;

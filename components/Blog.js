@@ -127,6 +127,14 @@ const Blog = () => {
 						width: 200px;
 						height: 150px;
 					}
+				}
+
+				@media only screen and (max-width: 360px) {
+					.blog-list .list img {
+						width: 300px;
+						height: 250px;
+					}
+				}
 
 				@media only screen and (max-width: 768px) {
 				}

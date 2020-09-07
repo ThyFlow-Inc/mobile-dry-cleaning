@@ -8,15 +8,22 @@ const CTA = () => {
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-6">
+								<div className="cta-img">
+									<img src="assets/CTA/mt-1276-home-img02.jpg" />
+								</div>
+							</div>
+							<div className="col-lg-6">
 								<div className="cta-text">
 									<div className="slogan">
 										Ready to oursource
 										<br />
 										your dry cleaning service?
+										<p>
+											ThyFlow is the easiest way for you to clean your dry
+											cleaning.
+										</p>
 									</div>
 								</div>
-							</div>
-							<div className="col-lg-6">
 								<div className="cta-download">
 									<form
 										action="https://forms.zohopublic.com/thyflow/form/InviteForm/formperma/hhZdwWmBg5AwZ1GNN08MYEcY3tDPFStgixYihuf3PTU/htmlRecords/submit"
@@ -34,7 +41,7 @@ const CTA = () => {
 											</div>
 											<div className="cta-button">
 												<a href="#">
-													<button>Get Invite</button>
+													<button>Get Started</button>
 												</a>
 											</div>
 										</div>
@@ -50,7 +57,8 @@ const CTA = () => {
 
 				.cta {
 					width: 100%;
-					height: 323px;
+					/*height: 323px;*/
+					height: auto;
 					background: #3751ff;
 					display: flex;
 					justify-content: center;
@@ -61,10 +69,45 @@ const CTA = () => {
 				.cta .cta-text .slogan {
 					font-family: Lato;
 					font-style: normal;
-					font-weight: 500;
-					font-size: 48px;
+					font-weight: 900;
+					font-size: 34px;
 					color: #ffffff;
 					text-align: left;
+				}
+
+				.cta .cta-text .slogan p {
+					font-family: Lato;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 21px;
+					color: #ffffff;
+					text-align: left;
+					margin-top: 20px;
+				}
+
+				.cta .cta-text {
+					margin-top: 15px;
+				}
+
+				.cta .cta-img {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 300px;
+				}
+
+				.cta .cta-img img {
+					width: 450px;
+					height: 250px;
+					-webkit-border-radius: 8px;
+					-moz-border-radius: 8px;
+					-o-border-radius: 8px;
+					border-radius: 8px;
+
+					-webkit-box-shadow: 5px 2px 10px #ddd;
+					-moz-box-shadow: 5px 2px 10px #ddd;
+					-o-box-shadow: 5px 2px 10px #ddd;
+					box-shadow: 5px 2px 10px #ddd;
 				}
 
 				.cta-download .row {
@@ -105,17 +148,8 @@ const CTA = () => {
 				}
 
 				.cta-download .download-text {
-					/*font-family: Lato;
-					font-style: normal;
-					font-weight: 600;
-					font-size: 24px;
-					text-align: center;
-					color: #dfe0eb;*/
-
 					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 150px;
+					margin-bottom: 15px;
 				}
 
 				.cta-download .download-text a {
@@ -135,13 +169,13 @@ const CTA = () => {
 					border: 0;
 					width: 130px;
 					height: 50px;
-					background: #fff;
+					background: #f4af1b;
 					border-radius: 6px;
 					font-family: Lato;
 					font-style: normal;
 					font-weight: normal;
 					font-size: 16px;
-					color: #455880;
+					color: #00154f;
 					margin-left: 5px;
 
 					display: flex;
@@ -150,7 +184,7 @@ const CTA = () => {
 				}
 
 				.cta-download .download-text button:hover {
-					background: #ebebeb;
+					background: #db9d18;
 				}
 
 				.cta-download .download-suggest {
@@ -189,15 +223,29 @@ const CTA = () => {
 					}
 				}
 
+				@media only screen and (max-width: 360px) {
+					.cta-download .download-text input[type='email'] {
+						width: 300px;
+					}
+					.cta-download .download-text button {
+						width: 300px !important;
+					}
+				}
+
 				@media only screen and (max-width: 500px) {
 					.cta-download .download-text {
 						flex-direction: column;
+						align-items: center;
 					}
 
 					.cta-download .download-text button {
 						width: 350px;
 						margin-left: 0;
 						margin-top: 10px;
+					}
+
+					.cta .cta-img img {
+						width: 300px;
 					}
 				}
 
@@ -218,14 +266,22 @@ const CTA = () => {
 				}
 
 				@media only screen and (max-width: 1024px) {
+					.cta .cta-text .slogan,
+					.cta .cta-text .slogan p {
+						text-align: center;
+					}
+
+					.cta-download .download-text {
+						justify-content: center;
+					}
 				}
 
 				@media only screen and (max-width: 1200px) {
-					.cta .cta-text .slogan {
+					/*.cta .cta-text .slogan {
 						font-size: 41px;
 						text-align: center;
 						margin-bottom: 30px;
-					}
+					}*/
 				}
 
 				/* CTA End */
