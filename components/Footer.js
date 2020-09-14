@@ -44,7 +44,10 @@ const Footer = () => {
 									<div className="social-media-text">Social Handles</div>
 									<div className="social-media-links">
 										<div>
-											<a href="#">
+											<a
+												href="https://www.facebook.com/ThyFlow-312710119426057/"
+												target="_blank"
+											>
 												<img
 													src="assets/Footer/social/icon-facebook@3x.png"
 													alt="social icon"
@@ -52,7 +55,10 @@ const Footer = () => {
 											</a>
 										</div>
 										<div>
-											<a href="#">
+											<a
+												href="https://www.instagram.com/thyflow/"
+												target="_blank"
+											>
 												<img
 													src="assets/Footer/social/icon-instagram@3x.png"
 													alt="social icon"
@@ -60,7 +66,7 @@ const Footer = () => {
 											</a>
 										</div>
 										<div>
-											<a href="#">
+											<a href="https://twitter.com/thyflow" target="_blank">
 												<img
 													src="assets/Footer/social/icon-twitter@3x.png"
 													alt="social icon"

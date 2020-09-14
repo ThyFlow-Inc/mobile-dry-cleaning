@@ -11,7 +11,7 @@ const Hero = () => {
 							<br />
 							You Need It!
 						</div>
-						<p>Premium On-Deman dry-cleaners</p>
+						<p>Premium On-Deman Dry-Cleaners</p>
 					</div>
 					<div className="hero-cta">
 						<form
@@ -25,20 +25,20 @@ const Hero = () => {
 									<input
 										type="email"
 										name="Email"
-										placeholder="Your email"
+										placeholder="Enter Your email"
 										id="alt-text"
 									/>
 								</div>
 								<div className="hero-cta-invite">
 									<a href="#">
-										<button type="submit">Get Invite</button>
+										<button type="submit">Get Started</button>
 									</a>
 								</div>
 							</div>
 						</form>
 						<div className="alt-text">
 							<label htmlFor="alt-text">
-								Enter your email to get an invite to ThyFlow
+								Enter your email to get an invite to ThyFlow Mobile Dry Cleaning
 							</label>
 						</div>
 					</div>
@@ -98,7 +98,7 @@ const Hero = () => {
 				.hero-cta .alt-text {
 					position: relative;
 					font: 14px Lato;
-					left: -107px;
+					left: -47px;
 					margin-top: 5px;
 					color: #1e266d;
 				}

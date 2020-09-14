@@ -1,26 +1,80 @@
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const CTA = () => {
+	const typedTextSpan = useRef(null);
+	const cursorSpan = useRef(null);
+
+	const textArray = [
+		'easiest',
+		'safest',
+		'cheapest',
+		'best',
+		'cleanest',
+		'smartest',
+	];
+	const typingDelay = 200;
+	const erasingDelay = 100;
+	const newTextDelay = 2000;
+	let textArrayIndex = 0;
+	let charIndex = 0;
+
+	function type() {
+		if (charIndex < textArray[textArrayIndex].length) {
+			if (!cursorSpan.current.classList.contains('typing'))
+				cursorSpan.current.classList.add('typing');
+			typedTextSpan.current.textContent += textArray[textArrayIndex].charAt(
+				charIndex
+			);
+			charIndex++;
+			setTimeout(type, typingDelay);
+		} else {
+			cursorSpan.current.classList.remove('typing');
+			setTimeout(erase, newTextDelay);
+		}
+	}
+
+	function erase() {
+		if (charIndex > 0) {
+			if (!cursorSpan.current.classList.contains('typing'))
+				cursorSpan.current.classList.add('typing');
+			typedTextSpan.current.textContent = textArray[textArrayIndex].substring(
+				0,
+				charIndex - 1
+			);
+			charIndex--;
+			setTimeout(erase, erasingDelay);
+		} else {
+			cursorSpan.current.classList.remove('typing');
+			textArrayIndex++;
+			if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+			setTimeout(type, typingDelay + 1100);
+		}
+	}
+
+	useEffect(() => {
+		if (textArray.length) setTimeout(type, 0);
+	}, []);
+
 	return (
 		<div>
 			<section id="cta">
 				<div className="cta">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-6">
-								<div className="cta-img">
-									<img src="assets/CTA/mt-1276-home-img02.jpg" />
-								</div>
-							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-12">
 								<div className="cta-text">
 									<div className="slogan">
 										Ready to oursource
 										<br />
 										your dry cleaning service?
 										<p>
-											ThyFlow is the easiest way for you to clean your dry
-											cleaning.
+											ThyFlow is the{' '}
+											<span className="typed-text" ref={typedTextSpan}></span>
+											<span className="cursor" ref={cursorSpan}>
+												&nbsp;
+											</span>{' '}
+											way for you to clean your dry cleaning.
 										</p>
 									</div>
 								</div>
@@ -36,7 +90,7 @@ const CTA = () => {
 												<input
 													type="email"
 													name="Email"
-													placeholder="Your Email"
+													placeholder="Enter Your Email"
 												/>
 											</div>
 											<div className="cta-button">
@@ -57,32 +111,107 @@ const CTA = () => {
 
 				.cta {
 					width: 100%;
-					/*height: 323px;*/
-					height: auto;
-					background: #3751ff;
+					height: 323px;
+					/*background: #3751ff;*/
+					background: #1a202b;
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					margin-top: 50px;
+					position: relative;
+				}
+
+				.cta::before {
+					content: '';
+					background-image: url('/assets/CTA/Removing-Impurities-By-Dry-Cleaning.jpg');
+					background-size: cover;
+					background-attachment: fixed;
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					bottom: 0px;
+					left: 0px;
+					opacity: 0.3;
 				}
 
 				.cta .cta-text .slogan {
 					font-family: Lato;
 					font-style: normal;
 					font-weight: 900;
-					font-size: 34px;
+					font-size: 43px;
 					color: #ffffff;
 					text-align: left;
 				}
+
+				.cta .cta-text .slogan span.cursor {
+					display: inline-block;
+					background-color: #ccc;
+					margin-left: 0.1rem;
+					width: 1.5px;
+					animation: blink 1s infinite;
+				}
+
+				.cta .cta-text .slogan span.cursor.typing {
+					animation: none;
+				}
+
+				@keyframes blink {
+					0% {
+						background-color: #ccc;
+					}
+					49% {
+						background-color: #ccc;
+					}
+					50% {
+						background-color: transparent;
+					}
+					99% {
+						background-color: transparent;
+					}
+					100% {
+						background-color: #ccc;
+					}
+				}
+
+				.cta .cta-text .slogan span.typed-text {
+					color: #f4af1b;
+					font-weight: bold;
+				}
+
+				/*.cta .cta-text .slogan span:before {
+					content: '';
+					animation: animate infinite 10s ease;
+				}
+
+				@keyframes animate {
+					0% {
+						content: 'easiest';
+					}
+					20% {
+						content: 'safest';
+					}
+					40% {
+						content: 'cleanest';
+					}
+					60% {
+						content: 'smartest';
+					}
+					80% {
+						content: 'cheapest';
+					}
+					100% {
+						content: 'best';
+					}
+				}*/
 
 				.cta .cta-text .slogan p {
 					font-family: Lato;
 					font-style: normal;
 					font-weight: 500;
-					font-size: 21px;
+					font-size: 24px;
 					color: #ffffff;
 					text-align: left;
-					margin-top: 20px;
+					margin-top: 10px;
 				}
 
 				.cta .cta-text {

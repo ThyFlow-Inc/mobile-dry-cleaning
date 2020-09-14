@@ -54,12 +54,6 @@ const HowItWorks = () => {
 						</p>
 					</div>
 
-					<div className="how-it-works-button">
-						<a href="#">
-							<div className="get-started-button">Get Started</div>
-						</a>
-					</div>
-
 					<div className="how-it-works-signup">
 						<form
 							action="https://forms.zohopublic.com/thyflow/form/SignupProcess/formperma/x_HU6B2P9O-STSVBcMWvj0eSIefzqmyupC2ooGNVdJQ/htmlRecords/submit"
@@ -70,10 +64,18 @@ const HowItWorks = () => {
 							encType="multipart/form-data"
 						>
 							<div className="signup-email">
-								<input type="email" name="Email" placeholder="Your Email" />
+								<input
+									type="email"
+									name="Email"
+									placeholder="Enter Your Email"
+								/>
 							</div>
 							<div className="signup-city">
-								<input type="text" name="SingleLine" placeholder="Your City" />
+								<input
+									type="text"
+									name="SingleLine"
+									placeholder="Enter Your City"
+								/>
 							</div>
 							<div className="signup-submit">
 								<button type="submit">Sign Up</button>
