@@ -7,6 +7,8 @@ import HowItWorks from '../components/HowItWorks';
 import About from '../components/About';
 import Testimonials from '../components/Testimonials';
 import Blog from '../components/Blog';
+import Blog2 from '../components/Blog2';
+import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import CTA from '../components/CTA';
 
@@ -25,7 +27,8 @@ const Index = () => {
 			<HowItWorks />
 			<About />
 			<Testimonials />
-			<Blog />
+			<Blog2 />
+			<Pricing />
 			<FAQ />
 			<CTA />
 		</Container>
