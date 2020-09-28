@@ -65,9 +65,7 @@ const CTA = () => {
 							<div className="col-lg-12">
 								<div className="cta-text">
 									<div className="slogan">
-										Ready to oursource
-										<br />
-										your dry cleaning service?
+										Ready to oursource your dry cleaning service?
 										<p>
 											ThyFlow is the{' '}
 											<span className="typed-text" ref={typedTextSpan}></span>
@@ -111,7 +109,7 @@ const CTA = () => {
 
 				.cta {
 					width: 100%;
-					height: 323px;
+					height: 350px;
 					/*background: #3751ff;*/
 					background: #1a202b;
 					display: flex;
@@ -123,7 +121,7 @@ const CTA = () => {
 
 				.cta::before {
 					content: '';
-					background-image: url('/assets/CTA/Removing-Impurities-By-Dry-Cleaning.jpg');
+					background-image: url('/assets/CTA/Woman-with-dirty-laundry.jpg');
 					background-size: cover;
 					background-attachment: fixed;
 					position: absolute;
@@ -139,7 +137,7 @@ const CTA = () => {
 					font-style: normal;
 					font-weight: 900;
 					font-size: 43px;
-					color: #ffffff;
+					color: #f4af1b;
 					text-align: left;
 				}
 

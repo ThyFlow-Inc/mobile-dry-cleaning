@@ -86,77 +86,29 @@ const Testimonials = () => {
 			<section id="testimonials">
 				<div className="testimonials">
 					<div className="testimonials-text">
-						<div className="slogan">What others are saying</div>
+						<div className="slogan">Cities We Are In</div>
 					</div>
 
 					<div className="testimonials-list">
 						<div className="testimonials-container" ref={cardContainer}>
 							<div className="list">
-								<div className="detail">
-									Completely beautiful website and amazing support! This is my
-									second website from this author and I love both of the sites
-									so much and she has helped me so well when I needed it!
-								</div>
-								<div className="profile-picture">
-									<img
-										src="assets/Profile_Picture/image 5@3x.png"
-										alt="profile picture"
-									/>
-								</div>
-
-								<div className="user-title">Happy User</div>
-								<div className="fullname">Yusuf Adeyemo</div>
+								<img src="/assets/Profile_Picture/sf.jpg" />
+								<div className="detail">San Francisco</div>
 							</div>
 
 							<div className="list">
-								<div className="detail">
-									Completely beautiful website and amazing support! This is my
-									second website from this author and I love both of the sites
-									so much and she has helped me so well when I needed it!
-								</div>
-								<div className="profile-picture">
-									<img
-										src="assets/Profile_Picture/image 5@3x.png"
-										alt="profile picture"
-									/>
-								</div>
-
-								<div className="user-title">Happy User</div>
-								<div className="fullname">Yusuf Adeyemo</div>
+								<img src="/assets/Profile_Picture/sj.jpg" />
+								<div className="detail">San Jose</div>
 							</div>
 
 							<div className="list">
-								<div className="detail">
-									Really easy to use and customize. easy to understand. Darinka
-									helped me with my site! She answers very quickly, a good
-									service! Thank you very much!
-								</div>
-								<div className="profile-picture">
-									<img
-										src="assets/Profile_Picture/image 6@3x.png"
-										alt="profile picture"
-									/>
-								</div>
-
-								<div className="user-title">Happy User</div>
-								<div className="fullname">Yusuf Adeyemo</div>
+								<img src="/assets/Profile_Picture/sd.jpg" />
+								<div className="detail">San Diego</div>
 							</div>
 
 							<div className="list">
-								<div className="detail">
-									Really pleasing to look at! Documentation (including
-									installation instructions) are clear and that is coming from a
-									relatively new WordPress user.
-								</div>
-								<div className="profile-picture">
-									<img
-										src="assets/Profile_Picture/image 7@3x.png"
-										alt="profile picture"
-									/>
-								</div>
-
-								<div className="user-title">Happy User</div>
-								<div className="fullname">Sal Sosoo</div>
+								<img src="/assets/Profile_Picture/sj.jpg" />
+								<div className="detail">San Jose</div>
 							</div>
 						</div>
 					</div>
@@ -213,17 +165,28 @@ const Testimonials = () => {
 					touch-action: none;
 
 					/*flex: 0 0 33.333333%;*/
+					position: relative;
 				}
+
+				.testimonials-list .list img {
+					width: 370px;
+					height: 100%;
+					border-radius: 4px;
+					opacity: 0.9;
+					position: relative;
+				}
+
 				.testimonials-list .list .detail {
 					font-family: Lato;
 					font-style: normal;
-					font-weight: normal;
-					font-size: 18px;
+					font-weight: bold;
+					font-size: 24px;
 					line-height: 180%;
-					color: #455880;
-					width: 80%;
+					/*color: #455880;*/
+					color: #1e266d;
 					height: 100%;
-					margin-top: 40px;
+					position: absolute;
+					text-shadow: 1px 1px #fff;
 				}
 
 				.testimonials-list .list .profile-picture {
